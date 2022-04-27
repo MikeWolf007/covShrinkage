@@ -3,16 +3,16 @@ A Package for Shrinkage Estimation of Covariance Matrices
 PURPOSE: To provide fast and accurate estimators of the covariance matrix based on linear and nonlinear shrinkage for general applications. 
 
 LINEAR SHRINKAGE:
-1) cov1Para: Linear shrinkage towards one-parameter matrix; all the variances are the same, all the covariances are zero. See Ledoit and Wolf (2004b).
-2) cov2Para: Linear shrinkage towards two-parameter matrix; all the variances are the same, all the covariances are the same. See Ledoit (1995, Appendix B.1).
-3) covCor: Linear shrinkage towards constant-correlation matrix; the target preserves the diagonal of the sample covariance matrix and all correlation coefficients are the same. See Ledoit and Wolf (2004a).
-4) covDiag: Linear shrinkage towards diagonal matrix; the target preserves the diagonal of the sample covariance matrix and all the covariances are zero. See Ledoit (1995, Appendix B.2).
-5) covMarket: Linear shrinkage towards a one-factor market model, where the factor is defined as the cross-sectional average of all the random variables; thanks to the idiosyncratic volatility of the residuals, the target preserves the diagonal of the sample covariance matrix. See Ledoit and Wolf (2003).
+1. cov1Para: Linear shrinkage towards one-parameter matrix; all the variances are the same, all the covariances are zero. See Ledoit and Wolf (2004b).
+2. cov2Para: Linear shrinkage towards two-parameter matrix; all the variances are the same, all the covariances are the same. See Ledoit (1995, Appendix B.1).
+3. covCor: Linear shrinkage towards constant-correlation matrix; the target preserves the diagonal of the sample covariance matrix and all correlation coefficients are the same. See Ledoit and Wolf (2004a).
+4. covDiag: Linear shrinkage towards diagonal matrix; the target preserves the diagonal of the sample covariance matrix and all the covariances are zero. See Ledoit (1995, Appendix B.2).
+5. covMarket: Linear shrinkage towards a one-factor market model, where the factor is defined as the cross-sectional average of all the random variables; thanks to the idiosyncratic volatility of the residuals, the target preserves the diagonal of the sample covariance matrix. See Ledoit and Wolf (2003).
 
 NONLINEAR SHRINKAGE:
-6) GIS.m: Nonlinear shrinkage derived under the Symmetrized Kullback-Leibler loss, called geometric-inverse shrinkage (GIS). It can be viewed as geometrically averaging linear-inverse shrinkage (LIS) with quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Remark 4.3).
-7) LIS.m: Nonlinear shrinkage derived under Stein’s loss, called linear-inverse shrinkage (LIS). See Ledoit and Wolf (2021, Section 3).
-8) QIS.m: Nonlinear shrinkage derived under Frobenius loss and its two cousins, Inverse Stein’s loss and Minimum Variance loss, called quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Section 4.5). 
+6. GIS: Nonlinear shrinkage derived under the Symmetrized Kullback-Leibler loss, called geometric-inverse shrinkage (GIS). It can be viewed as geometrically averaging linear-inverse shrinkage (LIS) with quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Remark 4.3).
+7. LIS: Nonlinear shrinkage derived under Stein’s loss, called linear-inverse shrinkage (LIS). See Ledoit and Wolf (2021, Section 3).
+8. QIS: Nonlinear shrinkage derived under Frobenius loss and its two cousins, Inverse Stein’s loss and Minimum Variance loss, called quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Section 4.5). 
 
 INPUT(S): Y (N*p): raw data matrix of N iid observations on p random variables.
 Second optional input parameter: If the second (optional) parameter k is absent, not-a-number, or empty,then the algorithm demeans the data by default, and adjusts the effective sample size accordingly. If the user inputs k = 0, then no demeaning takes place; if user inputs k = 1, then it signifies that the data Y has already been demeaned. 
