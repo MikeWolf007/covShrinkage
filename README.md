@@ -15,7 +15,7 @@ NONLINEAR SHRINKAGE:
 3. QIS: Nonlinear shrinkage derived under Frobenius loss and its two cousins, Inverse Stein’s loss and Minimum Variance loss, called quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2022, Section 4.5). 
 
 INPUT(S): Y (N*p): raw data matrix of N iid observations on p random variables.
-Second optional input parameter: If the second (optional) parameter k is absent, not-a-number, or empty,then the algorithm demeans the data by default, and adjusts the effective sample size accordingly. If the user inputs k = 0, then no demeaning takes place; if user inputs k = 1, then it signifies that the data Y has already been demeaned. 
+Second optional input parameter: If the second (optional) parameter k is absent, not-a-number, or empty,then the algorithm demeans the data by default, and adjusts the effective sample size accordingly. If the user inputs k = 0, then no demeaning takes place; if user inputs k = 1, then it signifies that the data Y have already been demeaned. 
 
 OUTPUT: sigmahat (p*p): invertible covariance matrix estimator.
 
