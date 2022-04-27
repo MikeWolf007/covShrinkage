@@ -21,9 +21,13 @@ OUTPUT: sigmahat (p*p): invertible covariance matrix estimator.
 
 REFERENCES:
 a) Ledoit, O. (1995). Essays on Risk and Return in the Stock Market. PhD thesis, Massachusetts Institute of Technology, Sloan School of Management. Available online at http://dspace.mit.edu/handle/1721.1/11875. 
+
 b) Ledoit, O. and Wolf, M. (2003). Improved estimation of the covariance matrix of stock returns with an application to portfolio selection. Journal of Empirical Finance, 10(5):603–621. doi:10.1016/S0927-5398(03)00007-0
+
 c) Ledoit, O. and Wolf, M. (2004a). Honey, I shrunk the sample covariance matrix. Journal of Portfolio Management, 30(4):110–119.
+
 d) Ledoit, O. and Wolf, M. (2004b). A well-conditioned estimator for large-dimensional covariance matrices. Journal of Multivariate Analysis, 88(2):365–411. doi:10.1016/S0047-259X(03)00096-4
+
 e) Ledoit, O. and Wolf, M. (2022). Quadratic shrinkage for large covariance matrices. Bernoulli, 28(3): 1519-1547.
 
 Copyright 2022:
