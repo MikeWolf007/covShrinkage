@@ -10,9 +10,9 @@ LINEAR SHRINKAGE:
 5. covMarket: Linear shrinkage towards a one-factor market model, where the factor is defined as the cross-sectional average of all the random variables; thanks to the idiosyncratic volatility of the residuals, the target preserves the diagonal of the sample covariance matrix. See Ledoit and Wolf (2003).
 
 NONLINEAR SHRINKAGE:
-1. GIS: Nonlinear shrinkage derived under the Symmetrized Kullback-Leibler loss, called geometric-inverse shrinkage (GIS). It can be viewed as geometrically averaging linear-inverse shrinkage (LIS) with quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Remark 4.3).
-2. LIS: Nonlinear shrinkage derived under Stein’s loss, called linear-inverse shrinkage (LIS). See Ledoit and Wolf (2021, Section 3).
-3. QIS: Nonlinear shrinkage derived under Frobenius loss and its two cousins, Inverse Stein’s loss and Minimum Variance loss, called quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Section 4.5). 
+1. GIS: Nonlinear shrinkage derived under the Symmetrized Kullback-Leibler loss, called geometric-inverse shrinkage (GIS). It can be viewed as geometrically averaging linear-inverse shrinkage (LIS) with quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2022, Remark 4.3).
+2. LIS: Nonlinear shrinkage derived under Stein’s loss, called linear-inverse shrinkage (LIS). See Ledoit and Wolf (2022, Section 3).
+3. QIS: Nonlinear shrinkage derived under Frobenius loss and its two cousins, Inverse Stein’s loss and Minimum Variance loss, called quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2022, Section 4.5). 
 
 INPUT(S): Y (N*p): raw data matrix of N iid observations on p random variables.
 Second optional input parameter: If the second (optional) parameter k is absent, not-a-number, or empty,then the algorithm demeans the data by default, and adjusts the effective sample size accordingly. If the user inputs k = 0, then no demeaning takes place; if user inputs k = 1, then it signifies that the data Y has already been demeaned. 
@@ -21,15 +21,15 @@ OUTPUT: sigmahat (p*p): invertible covariance matrix estimator.
 
 REFERENCES:
 
-a) Ledoit, O. (1995). Essays on Risk and Return in the Stock Market. PhD thesis, Massachusetts Institute of Technology, Sloan School of Management. Available online at http://dspace.mit.edu/handle/1721.1/11875. 
+(a) Ledoit, O. (1995). Essays on Risk and Return in the Stock Market. PhD thesis, Massachusetts Institute of Technology, Sloan School of Management. Available online at http://dspace.mit.edu/handle/1721.1/11875. 
 
-b) Ledoit, O. and Wolf, M. (2003). Improved estimation of the covariance matrix of stock returns with an application to portfolio selection. Journal of Empirical Finance, 10(5):603–621. doi:10.1016/S0927-5398(03)00007-0
+(b) Ledoit, O. and Wolf, M. (2003). Improved estimation of the covariance matrix of stock returns with an application to portfolio selection. Journal of Empirical Finance, 10(5):603–621. doi:10.1016/S0927-5398(03)00007-0
 
-c) Ledoit, O. and Wolf, M. (2004a). Honey, I shrunk the sample covariance matrix. Journal of Portfolio Management, 30(4):110–119.
+(c) Ledoit, O. and Wolf, M. (2004a). Honey, I shrunk the sample covariance matrix. Journal of Portfolio Management, 30(4):110–119.
 
-d) Ledoit, O. and Wolf, M. (2004b). A well-conditioned estimator for large-dimensional covariance matrices. Journal of Multivariate Analysis, 88(2):365–411. doi:10.1016/S0047-259X(03)00096-4
+(d) Ledoit, O. and Wolf, M. (2004b). A well-conditioned estimator for large-dimensional covariance matrices. Journal of Multivariate Analysis, 88(2):365–411. doi:10.1016/S0047-259X(03)00096-4
 
-e) Ledoit, O. and Wolf, M. (2022). Quadratic shrinkage for large covariance matrices. Bernoulli, 28(3): 1519-1547.
+(e) Ledoit, O. and Wolf, M. (2022). Quadratic shrinkage for large covariance matrices. Bernoulli, 28(3): 1519-1547.
 
 Copyright 2022:
 - Olivier Ledoit (olivier.ledoit@econ.uzh.ch) for the Matlab version
