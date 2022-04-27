@@ -10,9 +10,9 @@ LINEAR SHRINKAGE:
 5. covMarket: Linear shrinkage towards a one-factor market model, where the factor is defined as the cross-sectional average of all the random variables; thanks to the idiosyncratic volatility of the residuals, the target preserves the diagonal of the sample covariance matrix. See Ledoit and Wolf (2003).
 
 NONLINEAR SHRINKAGE:
-6. GIS: Nonlinear shrinkage derived under the Symmetrized Kullback-Leibler loss, called geometric-inverse shrinkage (GIS). It can be viewed as geometrically averaging linear-inverse shrinkage (LIS) with quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Remark 4.3).
-7. LIS: Nonlinear shrinkage derived under Stein’s loss, called linear-inverse shrinkage (LIS). See Ledoit and Wolf (2021, Section 3).
-8. QIS: Nonlinear shrinkage derived under Frobenius loss and its two cousins, Inverse Stein’s loss and Minimum Variance loss, called quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Section 4.5). 
+1. GIS: Nonlinear shrinkage derived under the Symmetrized Kullback-Leibler loss, called geometric-inverse shrinkage (GIS). It can be viewed as geometrically averaging linear-inverse shrinkage (LIS) with quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Remark 4.3).
+2. LIS: Nonlinear shrinkage derived under Stein’s loss, called linear-inverse shrinkage (LIS). See Ledoit and Wolf (2021, Section 3).
+3. QIS: Nonlinear shrinkage derived under Frobenius loss and its two cousins, Inverse Stein’s loss and Minimum Variance loss, called quadratic-inverse shrinkage (QIS). See Ledoit and Wolf (2021, Section 4.5). 
 
 INPUT(S): Y (N*p): raw data matrix of N iid observations on p random variables.
 Second optional input parameter: If the second (optional) parameter k is absent, not-a-number, or empty,then the algorithm demeans the data by default, and adjusts the effective sample size accordingly. If the user inputs k = 0, then no demeaning takes place; if user inputs k = 1, then it signifies that the data Y has already been demeaned. 
@@ -35,6 +35,7 @@ Copyright 2022:
 - Olivier Ledoit (olivier.ledoit@econ.uzh.ch) for the Matlab version
 - Michael Wolf  (michael.wolf@econ.uzh.ch) for the R version
 - Patrick Ledoit (patrick.ledoit@yahoo.com) for the Python version
+- 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
