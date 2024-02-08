@@ -13,7 +13,8 @@ qis <- function(Y, k = -1) {
   n <- N - k    # effective sample size
   c <- p / n    # concentration ratio
   sample <- (t(Y) %*% Y) / n    # sample covariance matrix    
-  spectral <- eigen(sample)    # spectral decompositon
+  sample <- (t(sample) + sample) / 2   # enforece symmetry (even more)
+  spectral <- eigen(sample, symmetric = T)    # spectral decompositon
   lambda <- spectral$values[p:1]    # sort eigenvalues in ascending order
   u <- spectral$vectors[,p:1]    # eigenvectors follow their eigenvalues
   h <- min(c^2, 1/c^2)^0.35 / p^0.35    # smoothing parameter
